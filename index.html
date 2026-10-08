@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>İbrahim Sütcü</title>
+<meta name="description" content="İbrahim Sütcü: Bursa'da gayrimenkul danışmanı (ANN Gayrimenkul). Otonom drone sürüsü Sentinel, App Factory, SUTCY kripto botu ve VizaExpress gibi yapay zekâ ürünleri geliştiriyor.">
+<meta name="theme-color" content="#0b0c0e">
+<meta property="og:title" content="İbrahim Sütcü">
+<meta property="og:description" content="Gayrimenkul danışmanı ve yapay zekâ ürünleri geliştiren girişimci. Bursa.">
+<meta property="og:image" content="https://ibrahimsutcu.com/assets/img/og.jpg">
+<meta property="og:url" content="https://ibrahimsutcu.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ibrahimsutcu.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "İbrahim Sütcü",
+  "url": "https://ibrahimsutcu.com",
+  "image": "https://ibrahimsutcu.com/assets/img/og.jpg",
+  "email": "contact@ibrahimsutcu.com",
+  "telephone": "+90 541 622 46 11",
+  "jobTitle": "Gayrimenkul Danışmanı",
+  "worksFor": {
+    "@type": "RealEstateAgent",
+    "name": "ANN Gayrimenkul",
+    "telephone": "+90 541 622 46 11",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Aknil Plaza İş Merkezi, Kat 1 No 27",
+      "addressLocality": "Bursa",
+      "addressCountry": "TR"
+    }
+  },
+  "sameAs": ["https://vizaexpress.com"]
+}
+</script>
+<style>
+/* Layout: a dark, studio-lit stage. One portrait, one warm champagne accent, and live product visuals in a bento grid do the talking. */
+:root{
+  --bg:#0b0c0e;
+  --bg-2:#101114;
+  --card:#131417;
+  --card-2:#17181c;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.14);
+  --fg:#f3f2ee;
+  --muted:#a1a1a6;
+  --dim:#6c6d73;
+  --accent:#e3b778;          /* champagne */
+  --accent-soft:rgba(227,183,120,.14);
+  --live:#5fd39a;
+  --f-sans:"Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-serif:"Instrument Serif", "Times New Roman", Georgia, serif;
+  --f-mono:"Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:20px;
+  --wrap:76rem;
+  --gutter:clamp(16px,4vw,40px);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-sans);font-size:16px;line-height:1.6;
+  padding-inline:var(--gutter);padding-block:0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,canvas{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:var(--bg)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
+p{margin:0}
+em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.wrap{max-width:var(--wrap);margin-inline:auto}
+.label{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.label b{color:var(--accent);font-weight:500}
+
+/* backdrop */
+.backdrop{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(60rem 40rem at 78% -10%, rgba(227,183,120,.10), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 30%, rgba(120,140,170,.06), transparent 60%),
+    var(--bg)}
+.backdrop::after{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:72px 72px;opacity:.35;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 0%, #000 0%, transparent 70%);mask-image:radial-gradient(ellipse at 50% 0%, #000 0%, transparent 70%)}
+
+/* nav */
+.nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:50;display:flex;justify-content:center;margin-top:14px}
+.nav-in{display:flex;align-items:center;gap:6px;padding:6px 6px 6px 14px;border:1px solid var(--line-2);border-radius:999px;
+  background:rgba(19,20,23,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);
+  box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;letter-spacing:-.02em;margin-right:8px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--fg);color:var(--bg);
+  font-family:var(--f-serif);font-style:italic;font-size:16px}
+.nav a.l{padding:8px 12px;border-radius:999px;font-size:14px;color:var(--muted);transition:color .2s,background .2s}
+.nav a.l:hover{color:var(--fg);background:rgba(255,255,255,.06)}
+.nav a.cta{padding:8px 14px;border-radius:999px;background:var(--fg);color:var(--bg);font-size:14px;font-weight:500;white-space:nowrap}
+.nav a.cta:hover{background:var(--accent)}
+@media (max-width:720px){.nav a.l{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;font-weight:500;font-size:15px;
+  border:1px solid var(--line-2);transition:transform .25s cubic-bezier(.2,.8,.2,1),background .25s,color .25s,border-color .25s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn.ghost{background:rgba(255,255,255,.03)}
+.btn.ghost:hover{border-color:var(--fg)}
+.btn svg{width:16px;height:16px;flex:none}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:center;
+  padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
+.hero-copy{display:flex;flex-direction:column;gap:28px;min-width:0}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 10px;border-radius:999px;
+  border:1px solid var(--line-2);background:rgba(255,255,255,.03);font-size:13px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 rgba(95,211,154,.6)}
+@media (prefers-reduced-motion:no-preference){.dot{animation:ping 2.2s infinite}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(95,211,154,.55)}70%,100%{box-shadow:0 0 0 8px rgba(95,211,154,0)}}
+.name{font-family:var(--f-serif);font-weight:400;font-size:clamp(5.75rem,11.5vw,9.75rem);letter-spacing:-.03em;line-height:.84;margin-block:0}
+.name .ln{display:block;width:max-content;max-width:100%;padding:.16em .08em .1em 0;margin-top:-.16em;
+  background-image:linear-gradient(105deg,#8d8d92 0%,#d9d8d4 18%,#ffffff 27%,#bdbdc2 38%,#f3f2ee 56%,#ffffff 63%,#94949a 82%,#e6e5e1 100%);
+  background-size:260% 100%;background-position:90% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.name .ln.it{font-style:italic;margin-left:.42em;
+  background-image:linear-gradient(105deg,#9a6f38 0%,#e3b778 20%,#fff3d8 28%,#d9a865 40%,#f2d29a 58%,#fff1d2 64%,#a77a40 84%,#e8c080 100%)}
+.name .ln.it::after{content:"";}
+.role{display:flex;align-items:flex-start;gap:14px;font-size:clamp(.9375rem,1.4vw,1.0625rem);color:var(--fg);letter-spacing:-.005em;font-weight:400}
+.role::before{content:"";flex:none;width:40px;height:1px;margin-top:.8em;background:linear-gradient(90deg,var(--accent),transparent)}
+.role i{font-style:normal;color:var(--dim)}
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>.name{animation:none}
+  .name .ln{animation:reveal 1.3s cubic-bezier(.2,.8,.2,1) both, sheen 8s ease-in-out 1.4s infinite}
+  .name .ln.it{animation-delay:.18s, 1.9s}
+}
+@keyframes reveal{from{clip-path:inset(-20% 100% -20% -10%);filter:blur(14px);transform:translateX(-.06em);opacity:.4}
+  to{clip-path:inset(-20% -20% -20% -10%);filter:blur(0);transform:none;opacity:1}}
+@keyframes sheen{0%{background-position:90% 0}50%{background-position:10% 0}100%{background-position:90% 0}}
+.hero .lede{font-size:clamp(1.0625rem,1.6vw,1.25rem);color:var(--muted);max-width:33rem;line-height:1.55}
+.hero .lede strong{color:var(--fg);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);padding-top:22px;gap:16px;max-width:34rem}
+.meta div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.meta strong{font-size:1.375rem;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.meta span{font-size:13px;color:var(--dim)}
+
+.stage{position:relative;aspect-ratio:4/5;max-width:100%;min-width:0;isolation:isolate}
+.stage .rings{position:absolute;inset:6% 2% 12%;z-index:-1}
+.stage .rings span{position:absolute;inset:0;margin:auto;border-radius:50%;border:1px solid var(--line-2)}
+.stage .rings span:nth-child(1){width:100%;aspect-ratio:1}
+.stage .rings span:nth-child(2){width:74%;aspect-ratio:1;border-color:var(--line)}
+.stage .rings span:nth-child(3){width:48%;aspect-ratio:1;border-color:rgba(227,183,120,.25)}
+.stage .rings .sweep{position:absolute;inset:0;margin:auto;width:100%;aspect-ratio:1;border-radius:50%;
+  background:conic-gradient(from 0deg, rgba(227,183,120,.22), transparent 18%);
+  -webkit-mask:radial-gradient(circle, #000 0 70%, transparent 71%);mask:radial-gradient(circle, #000 0 70%, transparent 71%)}
+@media (prefers-reduced-motion:no-preference){.stage .rings .sweep{animation:spin 9s linear infinite}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stage .glow{position:absolute;inset:18% 12% 0;z-index:-1;background:radial-gradient(closest-side, rgba(227,183,120,.22), transparent);filter:blur(10px)}
+.stage img{position:absolute;inset:auto 0 0 0;width:100%;height:100%;object-fit:contain;object-position:bottom center;
+  -webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.stage img{z-index:2}
+.orbit-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.orbit-svg.back{z-index:1}.orbit-svg.front{z-index:3}
+.orbit-svg ellipse,.orbit-svg path{fill:none;stroke:rgba(227,183,120,.35);stroke-width:1}
+.orbit-svg.back ellipse{stroke:rgba(255,255,255,.12);stroke-dasharray:2 6}
+.oc{position:absolute;left:0;top:0;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:14px;
+  border:1px solid var(--line-2);background:rgba(19,20,23,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 18px 44px rgba(0,0,0,.45);font-size:13px;line-height:1.25;white-space:nowrap;will-change:transform;transform-origin:center;
+  transition:border-color .25s, background .25s}
+.oc:hover,.oc:focus-visible{border-color:var(--accent);background:rgba(28,26,22,.92)}
+.oc .ic{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);flex:none;position:relative}
+.oc .ic svg{width:17px;height:17px}
+.oc .ic .lv{position:absolute;right:-2px;top:-2px;width:8px;height:8px;border-radius:50%;background:var(--live);border:2px solid var(--card)}
+.oc b{display:block;font-weight:500;color:var(--fg)}
+.oc small{display:block;color:var(--dim);font-size:11.5px}
+@media (max-width:560px){.oc small{display:none}.oc{padding:6px 12px 6px 6px;gap:8px;font-size:12.5px}.oc .ic{width:26px;height:26px;border-radius:8px}.oc .ic svg{width:14px;height:14px}}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .stage{max-width:30rem;width:100%;margin-inline:auto}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>*{animation:up .9s cubic-bezier(.2,.8,.2,1) both}
+  .hero-copy>*:nth-child(2){animation-delay:.06s}.hero-copy>*:nth-child(3){animation-delay:.12s}
+  .hero-copy>*:nth-child(4){animation-delay:.18s}.hero-copy>*:nth-child(5){animation-delay:.24s}.hero-copy>*:nth-child(6){animation-delay:.3s}
+  .stage{animation:fadein 1.2s ease both .15s}
+}
+@keyframes up{from{transform:translateY(16px);opacity:.001}to{transform:none;opacity:1}}
+@keyframes fadein{from{opacity:.001}to{opacity:1}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;margin-inline:calc(-1*var(--gutter));padding-block:18px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:48px;width:max-content;font-size:clamp(1.125rem,2vw,1.5rem);color:var(--dim);letter-spacing:-.02em;white-space:nowrap}
+.track span{display:inline-flex;align-items:center;gap:48px}
+.track span::after{content:"✦";color:var(--accent);font-size:.6em}
+@media (prefers-reduced-motion:no-preference){.track{animation:marq 38s linear infinite}}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding-block:clamp(72px,11vw,140px)}
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(36px,5vw,56px);max-width:46rem}
+.head h2{font-size:clamp(2.25rem,5.4vw,4.25rem)}
+.head p{color:var(--muted);font-size:1.0625rem;max-width:38rem}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{position:relative;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(180deg,var(--card-2),var(--card));
+  overflow:hidden;display:flex;flex-direction:column;min-width:0;isolation:isolate;transition:border-color .3s}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s;
+  background:radial-gradient(28rem circle at var(--mx,50%) var(--my,0%), rgba(227,183,120,.09), transparent 45%)}
+.card:hover{border-color:var(--line-2)}
+.card:hover::before{opacity:1}
+.card.w2{grid-column:span 2}
+.viz{position:relative;height:300px;border-bottom:1px solid var(--line);overflow:hidden;background:#0d0e10}
+.viz canvas{width:100%;height:100%}
+.body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card h3{font-size:1.75rem;letter-spacing:-.035em}
+.card p{color:var(--muted);max-width:36rem}
+.tag{display:inline-flex;align-items:center;gap:7px;height:26px;padding:0 10px;border-radius:999px;font-family:var(--f-mono);font-size:11px;
+  letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line-2);color:var(--muted);white-space:nowrap}
+.tag i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.tag.live{color:var(--live);border-color:rgba(95,211,154,.35)}
+.tag.live i{background:var(--live)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+.chips span{font-family:var(--f-mono);font-size:12px;color:var(--dim);padding:4px 9px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.link{display:inline-flex;align-items:center;gap:6px;color:var(--fg);font-weight:500;font-size:14px;border-bottom:1px solid var(--line-2);padding-bottom:2px;align-self:flex-start}
+.link:hover{border-color:var(--accent);color:var(--accent)}
+.link svg{width:14px;height:14px}
+.hud{position:absolute;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;pointer-events:none}
+.hud.tl{left:16px;top:14px}.hud.tr{right:16px;top:14px;text-align:right}.hud.bl{left:16px;bottom:14px}.hud.br{right:16px;bottom:14px;text-align:right}
+.hud b{color:var(--accent);font-weight:500}
+.hud .g{color:var(--live)}
+
+/* app factory viz */
+.pipe{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:22px}
+.nodes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;position:relative}
+.node{border:1px solid var(--line-2);border-radius:12px;padding:10px 8px;text-align:center;font-size:12px;background:rgba(255,255,255,.02);transition:all .4s;min-width:0}
+.node small{display:block;font-family:var(--f-mono);font-size:10px;color:var(--dim);letter-spacing:.06em;margin-bottom:2px}
+.node.on{border-color:var(--accent);background:var(--accent-soft);color:var(--fg);box-shadow:0 0 24px rgba(227,183,120,.15)}
+.node.done{border-color:rgba(95,211,154,.35)}
+.node.done small{color:var(--live)}
+.log{font-family:var(--f-mono);font-size:11.5px;line-height:1.75;color:var(--dim);border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(0,0,0,.25);min-height:118px;overflow:hidden}
+.log div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.log .k{color:var(--accent)}
+.log .ok{color:var(--live)}
+
+/* sutcy post */
+.xpost{position:absolute;left:16px;bottom:16px;width:min(260px,70%);border:1px solid var(--line-2);border-radius:14px;padding:12px 14px;
+  background:rgba(13,14,16,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:12.5px;line-height:1.45}
+.xpost .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.xpost .av{width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-weight:700;font-size:12px}
+.xpost .who b{font-weight:600}.xpost .who span{color:var(--dim)}
+.xpost .x{margin-left:auto;font-weight:700;color:var(--fg)}
+.xpost p{color:var(--muted)}
+
+/* visa viz */
+.docs{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;padding:40px 24px 20px;align-items:center}
+.doc{position:relative;aspect-ratio:3/4;max-height:250px;justify-self:center;width:100%;max-width:190px;border-radius:12px;border:1px solid var(--line-2);
+  background:linear-gradient(180deg,#1a1b1f,#141518);padding:16px;display:flex;flex-direction:column;gap:9px;overflow:hidden}
+.doc .ph{width:44px;height:54px;border-radius:6px;background:linear-gradient(180deg,#2a2b30,#202125)}
+.doc .ln{height:6px;border-radius:3px;background:#26272c}
+.doc .ln.s{width:60%}.doc .ln.m{width:80%}
+.doc .mrz{margin-top:auto;font-family:var(--f-mono);font-size:8px;color:#4a4b52;letter-spacing:.08em;line-height:1.5;word-break:break-all}
+.doc .scan{position:absolute;left:0;right:0;height:46px;top:-46px;background:linear-gradient(180deg,transparent,rgba(227,183,120,.28));border-bottom:1px solid var(--accent)}
+@media (prefers-reduced-motion:no-preference){.doc .scan{animation:scan 2.6s cubic-bezier(.5,0,.5,1) infinite}}
+@keyframes scan{to{top:100%}}
+.checks{display:flex;flex-direction:column;gap:8px;min-width:0}
+.check{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);font-size:13px;background:rgba(255,255,255,.02);transition:all .4s;min-width:0}
+.check span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.check em{font-style:normal;font-family:var(--f-mono);font-size:11px;color:var(--dim)}
+.check .st{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line-2);flex:none;display:grid;place-items:center;transition:all .3s}
+.check.ok{border-color:rgba(95,211,154,.3)}
+.check.ok .st{background:var(--live);border-color:var(--live)}
+.check.ok .st::after{content:"";width:8px;height:4px;border:2px solid var(--bg);border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.check.ok em{color:var(--live)}
+.check.run{border-color:rgba(227,183,120,.4)}
+.check.run em{color:var(--accent)}
+
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.card.w2{grid-column:span 2}}
+@media (max-width:680px){.bento{grid-template-columns:1fr}.card.w2{grid-column:auto}.viz{height:260px}
+  .docs{grid-template-columns:1fr;}.doc{display:none}}
+
+/* real estate */
+.estate{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:start}
+.estate .head{margin-bottom:28px}
+.office{border-radius:var(--r);border:1px solid var(--line-2);padding:26px;background:
+  radial-gradient(30rem 16rem at 100% 0%, rgba(227,183,120,.12), transparent 60%), var(--card);display:flex;flex-direction:column;gap:18px}
+.office .top{display:flex;align-items:center;gap:14px}
+.office .mono{width:52px;height:52px;border-radius:14px;background:var(--fg);color:var(--bg);display:grid;place-items:center;font-weight:700;letter-spacing:-.02em;font-size:15px;flex:none}
+.office h3{font-size:1.5rem;letter-spacing:-.03em}
+.office h3 + small{color:var(--dim);font-size:13px}
+.office address{font-style:normal;color:var(--muted);line-height:1.6}
+.office .acts{display:flex;flex-wrap:wrap;gap:10px}
+.office .btn{height:42px;padding:0 16px;font-size:14px}
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.svc article{border-radius:var(--r);border:1px solid var(--line);background:var(--card);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:border-color .3s, transform .3s}
+.svc article:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.svc .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-2);color:var(--accent);margin-bottom:6px}
+.svc .ic svg{width:20px;height:20px}
+.svc h3{font-size:1.25rem;letter-spacing:-.025em}
+.svc p{color:var(--muted);font-size:15px}
+.steps{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:16px}
+.steps div{padding:22px 22px 24px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.steps div+div{border-left:1px solid var(--line)}
+.steps .n{font-family:var(--f-mono);font-size:12px;color:var(--accent)}
+.steps b{font-weight:500;letter-spacing:-.02em}
+.steps span{color:var(--dim);font-size:14px}
+@media (max-width:980px){.estate{grid-template-columns:1fr}}
+@media (max-width:760px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps div:nth-child(3){border-left:0}.steps div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:520px){.svc{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.steps div+div{border-left:0;border-top:1px solid var(--line)}}
+
+/* story */
+.story{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,6vw,96px);align-items:start}
+.story .head{position:sticky;top:110px}
+.quote{font-family:var(--f-serif);font-size:clamp(1.75rem,3.6vw,2.75rem);line-height:1.15;letter-spacing:-.015em;color:var(--fg);margin-bottom:32px;text-wrap:balance}
+.quote span{color:var(--accent)}
+.prose{display:flex;flex-direction:column;gap:18px;color:var(--muted);font-size:1.0625rem;max-width:40rem}
+.prose strong{color:var(--fg);font-weight:500}
+.focus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:36px}
+.focus div{border-top:1px solid var(--line-2);padding-top:14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.focus b{font-weight:500;letter-spacing:-.02em}
+.focus span{font-size:14px;color:var(--dim)}
+@media (max-width:900px){.story{grid-template-columns:1fr}.story .head{position:static}}
+@media (max-width:560px){.focus{grid-template-columns:1fr}}
+
+/* contact */
+.contact{position:relative;border-radius:28px;border:1px solid var(--line-2);overflow:hidden;padding:clamp(28px,6vw,72px);isolation:isolate;
+  background:radial-gradient(40rem 24rem at 85% 0%, rgba(227,183,120,.16), transparent 60%),radial-gradient(30rem 20rem at 0% 100%, rgba(120,140,170,.08), transparent 60%),var(--card)}
+.contact h2{font-size:clamp(2.5rem,7vw,5.5rem);letter-spacing:-.05em;max-width:14ch}
+.contact h2 em.s{color:var(--accent)}
+.contact > p{color:var(--muted);font-size:1.125rem;max-width:34rem;margin-top:20px}
+.cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:clamp(32px,5vw,48px)}
+.cbox{border:1px solid var(--line);border-radius:16px;padding:20px;background:rgba(11,12,14,.55);display:flex;flex-direction:column;gap:10px;min-width:0}
+.cbox .v{font-size:1.0625rem;font-weight:500;letter-spacing:-.01em;overflow-wrap:anywhere}
+.cbox .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.sm{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 12px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--fg);
+  font:500 13px var(--f-sans);cursor:pointer;transition:all .2s}
+.sm:hover{border-color:var(--fg)}
+.sm.fill{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.sm.fill:hover{background:var(--accent);border-color:var(--accent)}
+.sm.ok{border-color:var(--live);color:var(--live)}
+@media (max-width:860px){.cgrid{grid-template-columns:1fr}}
+
+footer{padding-block:40px calc(40px + env(safe-area-inset-bottom,0px));color:var(--dim);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a:hover{color:var(--fg)}
+</style>
+</head>
+<body>
+<div class="backdrop" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Ana sayfa"><i>İS</i>İbrahim Sütcü</a>
+    <a class="l" href="#projeler">Projeler</a>
+    <a class="l" href="#gayrimenkul">Gayrimenkul</a>
+    <a class="l" href="#hikayem">Hikâyem</a>
+    <a class="cta" href="#iletisim">İletişime geç</a>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot"></span>Bursa · Yeni iş birliklerine açık</span>
+      <h1 class="name" aria-label="İbrahim Sütcü"><span class="ln" aria-hidden="true">İbrahim</span><span class="ln it" aria-hidden="true">Sütcü</span></h1>
+      <p class="role"><span>Gayrimenkul Danışmanı <i>&amp;</i> AI Ürün Geliştirici</span></p>
+      <p class="lede">Bursa'da <strong>ANN Gayrimenkul</strong> bünyesinde gayrimenkul danışmanıyım. Bir yandan da otonom drone sürülerinden kendi kendine işlem yapan kripto botlarına kadar <strong>yapay zekâ ürünleri</strong> geliştiriyorum.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#iletisim">Birlikte çalışalım
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#projeler">Projeleri incele</a>
+      </div>
+      <div class="meta">
+        <div><strong>4</strong><span>AI ürünü</span></div>
+        <div><strong>1</strong><span>Yayında ürün</span></div>
+        <div><strong>Bursa</strong><span>Ofis &amp; saha</span></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="glow"></div>
+      <div class="rings"><span></span><span></span><span></span><i class="sweep"></i></div>
+      <img src="assets/img/hero.webp" alt="İbrahim Sütcü, siyah ceket ve beyaz gömlekle portre" width="1100" height="1400" fetchpriority="high">
+      <svg class="orbit-svg back" id="orbit-back" aria-hidden="true"><ellipse/></svg>
+      <svg class="orbit-svg front" id="orbit-front" aria-hidden="true"><path/></svg>
+      <nav class="orbit" id="orbit" aria-label="Projeler ve ofis">
+        <a class="oc" href="#gayrimenkul"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span><span><b>ANN Gayrimenkul</b><small>Gayrimenkul Danışmanı</small></span></a>
+        <a class="oc" href="#p-sentinel"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m6.5 6.5 3.5 3.5m4 0 3.5-3.5m-11 11 3.5-3.5m4 0 3.5 3.5"/></svg></span><span><b>Sentinel</b><small>Otonom drone sürüsü</small></span></a>
+        <a class="oc" href="#p-sutcy"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4v16M17 4v16"/><rect x="5" y="8" width="4" height="7" rx="1"/><rect x="15" y="6" width="4" height="9" rx="1"/></svg></span><span><b>SUTCY</b><small>Binance kripto botu</small></span></a>
+        <a class="oc" href="#p-factory"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 9 5-9 5-9-5 9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><span><b>App Factory</b><small>Fikirden ürüne AI</small></span></a>
+        <a class="oc" href="#p-visa"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/></svg><i class="lv"></i></span><span><b>VizaExpress</b><small>Yayında</small></span></a>
+      </nav>
+    </div>
+  </div>
+
+</main>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Otonom Sürü Sistemleri</span><span>Algoritmik Trading</span><span>AI Ajanları</span><span>Belge Doğrulama</span><span>Konut &amp; Ticari Gayrimenkul</span><span>Yatırım Danışmanlığı</span>
+    <span>Otonom Sürü Sistemleri</span><span>Algoritmik Trading</span><span>AI Ajanları</span><span>Belge Doğrulama</span><span>Konut &amp; Ticari Gayrimenkul</span><span>Yatırım Danışmanlığı</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="projeler">
+    <div class="head">
+      <span class="label"><b>01</b> · Projeler</span>
+      <h2>Gerçek problemlere <em class="s">yapay zekâ</em> ile çözüm</h2>
+      <p>Arama kurtarmadan finansa, göç işlemlerinden yazılım üretimine kadar geliştirdiğim ürünler.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card w2" id="p-sentinel">
+        <div class="viz">
+          <canvas id="cv-swarm" aria-label="Sürü halinde uçan drone simülasyonu"></canvas>
+          <div class="hud tl">Sentinel · <b>SAR</b><br>Sınır gözetimi</div>
+          <div class="hud tr">Birim <b id="sw-n">18</b><br>Formasyon <span class="g">Adaptif</span></div>
+          <div class="hud bl">40.19N 29.06E</div>
+          <div class="hud br"><span class="g">●</span> Otonom</div>
+        </div>
+        <div class="body">
+          <div class="row"><h3>Sentinel</h3><span class="tag"><i></i>Ar-Ge</span></div>
+          <p>Arama kurtarma ve sınır güvenliği için geliştirdiğim, yapay zekâ destekli otonom drone sistemi. Drone'lar bir sürü halinde birlikte uçuyor, bölgeyi kendi aralarında paylaşıyor ve tespitleri anında merkeze iletiyor.</p>
+          <div class="chips"><span>Sürü zekâsı</span><span>Bilgisayarlı görü</span><span>Otonom navigasyon</span><span>Arama kurtarma</span></div>
+        </div>
+      </article>
+
+      <article class="card" id="p-sutcy">
+        <div class="viz">
+          <canvas id="cv-chart" aria-label="Temsili kripto fiyat grafiği"></canvas>
+          <div class="hud tl">BTC/USDT · <b>4S</b></div>
+          <div class="hud tr">Temsili</div>
+          <div class="xpost">
+            <div class="who"><span class="av">S</span><b>SUTCY</b><span>· şimdi</span><span class="x">𝕏</span></div>
+            <p id="xp">Yeni pozisyon açıldı: BTC/USDT. Strateji sinyali doğrulandı.</p>
+          </div>
+        </div>
+        <div class="body">
+          <div class="row"><h3>SUTCY</h3><span class="tag"><i></i>Geliştiriliyor</span></div>
+          <p>Binance'te kendi kendine işlem açıp kapatan ve her işlemini otomatik olarak X'te paylaşan kripto botu.</p>
+          <div class="chips"><span>Binance API</span><span>Algoritmik trading</span><span>X otomasyonu</span></div>
+        </div>
+      </article>
+
+      <article class="card" id="p-factory">
+        <div class="viz">
+          <div class="pipe">
+            <div class="nodes" id="nodes">
+              <div class="node"><small>01</small>Fikir</div>
+              <div class="node"><small>02</small>Kod</div>
+              <div class="node"><small>03</small>Growth</div>
+              <div class="node"><small>04</small>Marketing</div>
+            </div>
+            <div class="log" id="log" aria-live="off"></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="row"><h3>App Factory</h3><span class="tag"><i></i>Geliştiriliyor</span></div>
+          <p>Fikri yazmanız yeterli. Kodlamadan growth ve marketinge kadar tüm süreci kendi yürüten yapay zekâ sistemi.</p>
+          <div class="chips"><span>AI ajanları</span><span>Otomatik kodlama</span><span>Growth</span></div>
+        </div>
+      </article>
+
+      <article class="card w2" id="p-visa">
+        <div class="viz">
+          <div class="docs">
+            <div class="doc" aria-hidden="true">
+              <div class="ph"></div><div class="ln m"></div><div class="ln s"></div><div class="ln"></div><div class="ln s"></div>
+              <div class="mrz">P&lt;POLSUTCU&lt;&lt;IBRAHIM&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div>
+              <div class="scan"></div>
+            </div>
+            <div class="checks" id="checks">
+              <div class="check"><i class="st"></i><span>Pasaport</span><em>bekliyor</em></div>
+              <div class="check"><i class="st"></i><span>Kira sözleşmesi</span><em>bekliyor</em></div>
+              <div class="check"><i class="st"></i><span>Sağlık sigortası</span><em>bekliyor</em></div>
+              <div class="check"><i class="st"></i><span>İş / okul belgesi</span><em>bekliyor</em></div>
+              <div class="check"><i class="st"></i><span>Biyometrik fotoğraf</span><em>bekliyor</em></div>
+            </div>
+          </div>
+          <div class="hud tl">Karta pobytu · <b>PL</b></div>
+        </div>
+        <div class="body">
+          <div class="row"><h3>VizaExpress</h3><span class="tag live"><i></i>Yayında</span></div>
+          <p>Polonya oturum kartı (karta pobytu) başvurusu için kurduğum yapay zekâ destekli platform. Geliştirdiğim AI, başvuru belgelerini otomatik olarak kontrol edip doğruluyor; eksik ya da hatalı evrakı başvuru öncesinde yakalıyor.</p>
+          <a class="link" href="https://vizaexpress.com" target="_blank" rel="noopener">vizaexpress.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="gayrimenkul">
+    <div class="estate">
+      <div>
+        <div class="head">
+          <span class="label"><b>02</b> · Gayrimenkul</span>
+          <h2>Doğru mülk, <em class="s">doğru</em> karar</h2>
+          <p>Satarken, alırken ya da kiralarken süreci baştan sona birlikte yürütüyoruz. Veriye dayalı fiyatlama, şeffaf iletişim ve tapuya kadar takip.</p>
+        </div>
+        <div class="office">
+          <div class="top">
+            <span class="mono">ANN</span>
+            <div><h3>ANN Gayrimenkul</h3><small>Bursa</small></div>
+          </div>
+          <address>Aknil Plaza İş Merkezi<br>Kat 1, No 27 · Bursa</address>
+          <div class="acts">
+            <a class="btn primary" href="https://wa.me/905416224611" target="_blank" rel="noopener">WhatsApp'tan yaz</a>
+            <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Aknil+Plaza+Bursa" target="_blank" rel="noopener">Yol tarifi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <article>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11 12 4l9 7M5 10v10h14V10M10 20v-5h4v5"/></svg></span>
+          <h3>Konut alım &amp; satım</h3>
+          <p>Evinizi doğru fiyatla piyasaya çıkarıyor, ciddi alıcılarla buluşturuyorum. Arayanlar için ihtiyaca uygun seçenekleri önceden eliyorum.</p>
+        </article>
+        <article>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21V5l8-2v18M12 8h8v13M8 8h.01M8 12h.01M8 16h.01M16 12h.01M16 16h.01M2 21h20"/></svg></span>
+          <h3>Ticari gayrimenkul</h3>
+          <p>Ofis, dükkân ve iş yeri alım-satım ile kiralamasında lokasyon ve getiri odaklı danışmanlık.</p>
+        </article>
+        <article>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8.7-8.7M17 6l2 2M15 8l2 2"/></svg></span>
+          <h3>Kiralama</h3>
+          <p>Ev sahibi ve kiracı için güvenli, şeffaf ve hızlı ilerleyen bir kiralama süreci.</p>
+        </article>
+        <article>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M6 16l4-5 3 3 5-7"/><path d="M15 7h3v3"/></svg></span>
+          <h3>Yatırım danışmanlığı</h3>
+          <p>Bölge, fiyat ve kira verilerini birlikte okuyup birikiminiz için en doğru adımı planlıyoruz.</p>
+        </article>
+        <div class="steps">
+          <div><span class="n">01</span><b>Tanışma</b><span>İhtiyaç ve bütçeyi netleştiriyoruz.</span></div>
+          <div><span class="n">02</span><b>Analiz</b><span>Bölge ve emsal fiyatlara bakıyoruz.</span></div>
+          <div><span class="n">03</span><b>Görüşmeler</b><span>Uygun mülkleri birlikte geziyoruz.</span></div>
+          <div><span class="n">04</span><b>Tapu</b><span>Pazarlıktan devire kadar yanınızdayım.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hikayem">
+    <div class="story">
+      <div class="head">
+        <span class="label"><b>03</b> · Hikâyem</span>
+        <h2>Sahada insan, ekranda <em class="s">veri</em></h2>
+      </div>
+      <div>
+        <p class="quote">Bir evin değeri metrekareden, bir ürünün değeri satır sayısından ibaret değil. <span>İkisinde de asıl mesele güven.</span></p>
+        <div class="prose">
+          <p>Gayrimenkulde her gün insanların hayatlarındaki en büyük kararlardan birine eşlik ediyorum. Bu iş bana dinlemeyi, doğru soruyu sormayı ve kararı veriyle desteklemeyi öğretti.</p>
+          <p>Aynı merakla teknolojiye yöneldim. Bir problemi gördüğümde onu otomatikleştirebilir miyim diye düşünüyorum. Polonya'da oturum kartı başvurusu yapanların evrak derdini çözmek için <strong>VizaExpress</strong>'i kurdum. Ardından <strong>SUTCY</strong>, <strong>App Factory</strong> ve <strong>Sentinel</strong> geldi.</p>
+          <p>Bugün iki dünyada birden çalışıyorum ve her biri diğerini daha iyi yapmamı sağlıyor.</p>
+        </div>
+        <div class="focus">
+          <div><b>Gayrimenkul</b><span>Konut, ticari, yatırım</span></div>
+          <div><b>Yapay zekâ</b><span>Ajanlar, görü, otomasyon</span></div>
+          <div><b>Girişimcilik</b><span>Fikirden ürüne</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim" style="padding-top:0">
+    <div class="contact">
+      <span class="label"><b>04</b> · İletişim</span>
+      <h2 style="margin-top:18px">Birlikte bir şey <em class="s">inşa edelim.</em></h2>
+      <p>Bir mülk, bir yatırım fikri ya da bir proje için. Size en kısa sürede dönüş yaparım.</p>
+      <div class="cgrid">
+        <div class="cbox">
+          <span class="label">E-posta</span>
+          <span class="v" id="v-mail">contact@ibrahimsutcu.com</span>
+          <div class="acts">
+            <a class="sm fill" href="mailto:contact@ibrahimsutcu.com">E-posta gönder</a>
+            <button class="sm" type="button" id="cp-mail" data-copy="contact@ibrahimsutcu.com">Kopyala</button>
+          </div>
+        </div>
+        <div class="cbox">
+          <span class="label">Telefon · WhatsApp</span>
+          <span class="v">0541 622 46 11</span>
+          <div class="acts">
+            <a class="sm fill" href="https://wa.me/905416224611" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="sm" href="tel:+905416224611">Ara</a>
+            <button class="sm" type="button" id="cp-tel" data-copy="+90 541 622 46 11">Kopyala</button>
+          </div>
+        </div>
+        <div class="cbox">
+          <span class="label">Ofis</span>
+          <span class="v">ANN Gayrimenkul<br><span style="color:var(--muted);font-weight:400">Aknil Plaza İş Merkezi, Kat 1 No 27, Bursa</span></span>
+          <div class="acts">
+            <a class="sm fill" href="https://www.google.com/maps/search/?api=1&amp;query=Aknil+Plaza+Bursa" target="_blank" rel="noopener">Haritada aç</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> İbrahim Sütcü · Bursa</span>
+    <nav aria-label="Alt menü"><a href="#projeler">Projeler</a><a href="#gayrimenkul">Gayrimenkul</a><a href="#hikayem">Hikâyem</a><a href="https://vizaexpress.com" target="_blank" rel="noopener">VizaExpress</a></nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ACC = "227,183,120", LIVE = "95,211,154";
+
+  function visible(el, cb){
+    if(!("IntersectionObserver" in window)){ cb(true); return; }
+    new IntersectionObserver(function(es){ es.forEach(function(e){ cb(e.isIntersecting); }); }, {rootMargin:"80px"}).observe(el);
+  }
+  function fit(cv){
+    var r = cv.getBoundingClientRect(), d = Math.min(window.devicePixelRatio||1, 2);
+    cv.width = Math.max(1, r.width*d); cv.height = Math.max(1, r.height*d);
+    var c = cv.getContext("2d"); c.setTransform(d,0,0,d,0,0); return {c:c, w:r.width, h:r.height};
+  }
+  function loop(cv, step, onResize){
+    var on = true, raf = 0, last = 0;
+    function tick(t){ last = t; step(t); if(on && !reduce) raf = requestAnimationFrame(tick); }
+    visible(cv, function(v){ on = v; cancelAnimationFrame(raf); if(v) raf = requestAnimationFrame(tick); });
+    window.addEventListener("resize", function(){ onResize(); step(last); });
+    step(0);
+  }
+
+  /* Sentinel swarm */
+  (function(){
+    var cv = document.getElementById("cv-swarm"); if(!cv) return;
+    var g = fit(cv), N = 18, B = [], tgt = {x:0,y:0}, ang = 0;
+    for(var i=0;i<N;i++) B.push({x:Math.random()*g.w, y:Math.random()*g.h, vx:Math.random()-.5, vy:Math.random()-.5});
+    var spots = [];
+    for(var j=0;j<5;j++) spots.push({x:.15+Math.random()*.7, y:.25+Math.random()*.5, f:0});
+    function step(t){
+      var c = g.c, w = g.w, h = g.h;
+      c.clearRect(0,0,w,h);
+      // terrain contours
+      c.lineWidth = 1;
+      for(var k=1;k<9;k++){
+        c.strokeStyle = "rgba(255,255,255,"+(0.025+k*0.004)+")";
+        c.beginPath();
+        for(var x=0;x<=w;x+=12){
+          var y = h*(k/9) + Math.sin(x*0.012 + k*1.7)*14 + Math.cos(x*0.005+k)*10;
+          x===0 ? c.moveTo(x,y) : c.lineTo(x,y);
+        }
+        c.stroke();
+      }
+      // target path
+      var tt = t*0.00018;
+      tgt.x = w*(0.5 + 0.32*Math.sin(tt*1.3)); tgt.y = h*(0.5 + 0.28*Math.sin(tt*2.1+1));
+      // boids
+      for(var i=0;i<N;i++){
+        var b = B[i], cx=0, cy=0, ax=0, ay=0, sx=0, sy=0, n=0;
+        for(var m=0;m<N;m++){ if(m===i) continue; var o=B[m], dx=o.x-b.x, dy=o.y-b.y, d=Math.hypot(dx,dy);
+          if(d<90){ cx+=o.x; cy+=o.y; ax+=o.vx; ay+=o.vy; n++; if(d<28){ sx-=dx/d; sy-=dy/d; } } }
+        if(n){ b.vx += ((cx/n-b.x)*0.0008 + (ax/n-b.vx)*0.04); b.vy += ((cy/n-b.y)*0.0008 + (ay/n-b.vy)*0.04); }
+        b.vx += sx*0.06 + (tgt.x-b.x)*0.00035; b.vy += sy*0.06 + (tgt.y-b.y)*0.00035;
+        var sp = Math.hypot(b.vx,b.vy), mx = 1.6; if(sp>mx){ b.vx=b.vx/sp*mx; b.vy=b.vy/sp*mx; }
+        b.x += b.vx; b.y += b.vy;
+      }
+      // mesh links
+      for(var i2=0;i2<N;i2++) for(var j2=i2+1;j2<N;j2++){
+        var p=B[i2], q=B[j2], dd=Math.hypot(p.x-q.x,p.y-q.y);
+        if(dd<80){ c.strokeStyle="rgba("+ACC+","+(0.28*(1-dd/80))+")"; c.beginPath(); c.moveTo(p.x,p.y); c.lineTo(q.x,q.y); c.stroke(); }
+      }
+      // detections
+      spots.forEach(function(s){
+        var sx=s.x*w, sy=s.y*h, near=false;
+        B.forEach(function(b){ if(Math.hypot(b.x-sx,b.y-sy)<40) near=true; });
+        s.f = near ? 1 : Math.max(0, s.f-0.004);
+        if(s.f>0){
+          c.strokeStyle="rgba("+LIVE+","+s.f+")"; c.lineWidth=1.2;
+          c.strokeRect(sx-9,sy-9,18,18);
+          c.fillStyle="rgba("+LIVE+","+s.f+")"; c.font="10px 'Geist Mono', monospace"; c.fillText("TESPİT", sx+13, sy+4);
+          c.lineWidth=1;
+        }
+      });
+      // drones
+      B.forEach(function(b){
+        var a = Math.atan2(b.vy,b.vx);
+        c.save(); c.translate(b.x,b.y); c.rotate(a);
+        c.fillStyle="rgba("+ACC+",.10)"; c.beginPath(); c.arc(0,0,12,0,7); c.fill();
+        c.fillStyle="#f3f2ee"; c.beginPath(); c.moveTo(6,0); c.lineTo(-4,-3.6); c.lineTo(-2,0); c.lineTo(-4,3.6); c.closePath(); c.fill();
+        c.restore();
+      });
+    }
+    for(var wu=0; wu<400; wu++) step(wu*16);
+    loop(cv, step, function(){ g = fit(cv); });
+  })();
+
+  /* SUTCY chart */
+  (function(){
+    var cv = document.getElementById("cv-chart"); if(!cv) return;
+    var g = fit(cv), C = [], p = 100, last = 0, msgs = [
+      "Yeni pozisyon açıldı: BTC/USDT. Strateji sinyali doğrulandı.",
+      "Pozisyon kapatıldı: ETH/USDT. Kâr hedefine ulaşıldı.",
+      "Risk limiti güncellendi. Piyasa volatilitesi yükseldi.",
+      "Yeni pozisyon açıldı: SOL/USDT. Trend teyidi alındı."
+    ], mi = 0, xp = document.getElementById("xp");
+    function add(){ var o=p, ch=(Math.random()-.47)*3.2, cl=o+ch; var hi=Math.max(o,cl)+Math.random()*1.6, lo=Math.min(o,cl)-Math.random()*1.6; C.push({o:o,c:cl,h:hi,l:lo}); p=cl; if(C.length>60) C.shift(); }
+    for(var i=0;i<48;i++) add();
+    function step(t){
+      if(t-last>900){ add(); last=t; if(Math.random()<.25 && xp){ mi=(mi+1)%msgs.length; xp.textContent=msgs[mi]; } }
+      var c=g.c, w=g.w, h=g.h; c.clearRect(0,0,w,h);
+      var hi=-1e9, lo=1e9; C.forEach(function(k){ hi=Math.max(hi,k.h); lo=Math.min(lo,k.l); });
+      var pad=40, top=38, bot=h-28, y=function(v){ return bot - (v-lo)/(hi-lo||1)*(bot-top); };
+      c.strokeStyle="rgba(255,255,255,.05)"; c.lineWidth=1;
+      for(var gy=0; gy<5; gy++){ var yy=top+(bot-top)*gy/4; c.beginPath(); c.moveTo(0,yy); c.lineTo(w,yy); c.stroke(); }
+      var n=C.length, bw=(w-pad)/n;
+      // area under closes
+      c.beginPath(); C.forEach(function(k,i){ var x=i*bw+bw/2; i?c.lineTo(x,y(k.c)):c.moveTo(x,y(k.c)); });
+      c.lineTo((n-1)*bw+bw/2,bot); c.lineTo(bw/2,bot); c.closePath();
+      var gr=c.createLinearGradient(0,top,0,bot); gr.addColorStop(0,"rgba("+ACC+",.16)"); gr.addColorStop(1,"rgba("+ACC+",0)"); c.fillStyle=gr; c.fill();
+      C.forEach(function(k,i){
+        var x=i*bw+bw/2, up=k.c>=k.o, col= up ? "rgba("+LIVE+",.9)" : "rgba(240,110,110,.85)";
+        c.strokeStyle=col; c.beginPath(); c.moveTo(x,y(k.h)); c.lineTo(x,y(k.l)); c.stroke();
+        c.fillStyle=col; var y1=y(Math.max(k.o,k.c)), y2=y(Math.min(k.o,k.c)); c.fillRect(x-bw*0.3, y1, bw*0.6, Math.max(1,y2-y1));
+      });
+      var lc=C[n-1], ly=y(lc.c);
+      c.setLineDash([3,4]); c.strokeStyle="rgba("+ACC+",.6)"; c.beginPath(); c.moveTo(0,ly); c.lineTo(w,ly); c.stroke(); c.setLineDash([]);
+      c.fillStyle="rgb("+ACC+")"; c.fillRect(w-pad+2, ly-9, pad-4, 18);
+      c.fillStyle="#0b0c0e"; c.font="500 10px 'Geist Mono', monospace"; c.textAlign="center"; c.fillText("SON", w-pad/2, ly+3.5); c.textAlign="left";
+    }
+    loop(cv, step, function(){ g = fit(cv); });
+  })();
+
+  /* App Factory pipeline */
+  (function(){
+    var nodes = document.querySelectorAll("#nodes .node"), log = document.getElementById("log"); if(!log) return;
+    var script = [
+      [0,'<span class="k">fikir</span> › "Emlakçılar için ilan asistanı"'],
+      [0,'<span class="k">plan</span> › pazar ve rakip analizi tamamlandı'],
+      [1,'<span class="k">kod</span> › 42 dosya üretildi, testler çalışıyor'],
+      [1,'<span class="ok">✓</span> build başarılı, uygulama yayında'],
+      [2,'<span class="k">growth</span> › açılış sayfası A/B testi başladı'],
+      [3,'<span class="k">marketing</span> › kampanya ve içerik takvimi hazır'],
+      [3,'<span class="ok">✓</span> döngü tamamlandı, yeni fikir bekleniyor']
+    ];
+    var i = 0, lines = [];
+    function render(){
+      var s = script[i % script.length], stage = s[0];
+      if(i % script.length === 0) lines = [];
+      lines.push(s[1]); if(lines.length>5) lines.shift();
+      log.innerHTML = lines.map(function(l){ return "<div>"+l+"</div>"; }).join("");
+      nodes.forEach(function(n,k){ n.classList.toggle("on", k===stage); n.classList.toggle("done", k<stage); });
+      i++;
+    }
+    if(reduce){ for(var k=0;k<5;k++) render(); return; }
+    render(); for(var k2=0;k2<2;k2++) render();
+    var tm = null;
+    visible(log, function(v){ clearInterval(tm); if(v) tm = setInterval(render, 1400); });
+  })();
+
+  /* VizaExpress checks */
+  (function(){
+    var items = document.querySelectorAll("#checks .check"); if(!items.length) return;
+    var i = 0;
+    function set(k, cls, txt){ items[k].classList.remove("ok","run"); if(cls) items[k].classList.add(cls); items[k].querySelector("em").textContent = txt; }
+    function tick(){
+      if(i === items.length + 2){ items.forEach(function(_,k){ set(k, "", "bekliyor"); }); i = 0; }
+      if(i < items.length){ if(i>0) set(i-1, "ok", "doğrulandı"); set(i, "run", "kontrol ediliyor"); }
+      else if(i === items.length){ set(i-1, "ok", "doğrulandı"); }
+      i++;
+    }
+    if(reduce){ items.forEach(function(_,k){ set(k, k<4?"ok":"run", k<4?"doğrulandı":"kontrol ediliyor"); }); return; }
+    tick(); tick(); tick();
+    var tm = null;
+    visible(items[0], function(v){ clearInterval(tm); if(v) tm = setInterval(tick, 1100); });
+  })();
+
+  /* hero orbit */
+  (function(){
+    var stage = document.querySelector(".stage"), wrap = document.getElementById("orbit"); if(!wrap) return;
+    var chips = [].slice.call(wrap.querySelectorAll(".oc")), back = document.getElementById("orbit-back"), front = document.getElementById("orbit-front");
+    var ell = back.querySelector("ellipse"), arc = front.querySelector("path");
+    var W, H, cx, cy, rx, ry, tilt = -9*Math.PI/180, sizes = [], ang = 0, paused = false, last = 0, on = true;
+    var SPEED = (2*Math.PI) / 46000; // one turn ≈ 46 s
+    function measure(){
+      W = stage.clientWidth; H = stage.clientHeight;
+      sizes = chips.map(function(c){ return [c.offsetWidth, c.offsetHeight]; });
+      var maxW = Math.max.apply(null, sizes.map(function(s){ return s[0]; }));
+      var wide = window.innerWidth > 900;
+      cx = W/2; cy = H*0.6;
+      rx = wide ? W*0.56 : Math.max(60, (W - maxW)/2 - 2);
+      ry = H*(wide ? 0.15 : 0.13);
+      [back, front].forEach(function(sv){ sv.setAttribute("viewBox", "0 0 "+W+" "+H); });
+      var deg = tilt*180/Math.PI;
+      ell.setAttribute("cx", cx); ell.setAttribute("cy", cy); ell.setAttribute("rx", rx); ell.setAttribute("ry", ry);
+      ell.setAttribute("transform", "rotate("+deg+" "+cx+" "+cy+")");
+      arc.setAttribute("d", "M "+(cx-rx)+" "+cy+" A "+rx+" "+ry+" 0 0 0 "+(cx+rx)+" "+cy);
+      arc.setAttribute("transform", "rotate("+deg+" "+cx+" "+cy+")");
+    }
+    function place(){
+      var n = chips.length, ct = Math.cos(tilt), st = Math.sin(tilt);
+      chips.forEach(function(c, i){
+        var a = ang + i*(2*Math.PI/n), ex = rx*Math.cos(a), ey = ry*Math.sin(a);
+        var x = cx + ex*ct - ey*st, y = cy + ex*st + ey*ct, depth = (Math.sin(a)+1)/2; // 0 back, 1 front
+        var sc = 0.8 + 0.2*depth;
+        c.style.transform = "translate3d("+(x - sizes[i][0]/2).toFixed(1)+"px,"+(y - sizes[i][1]/2).toFixed(1)+"px,0) scale("+sc.toFixed(3)+")";
+        c.style.opacity = (0.5 + 0.5*depth).toFixed(3);
+        c.style.zIndex = Math.sin(a) > 0 ? 4 : 1;
+        c.style.filter = depth < 0.35 ? "blur("+((0.35-depth)*3).toFixed(2)+"px)" : "none";
+      });
+    }
+    function tick(t){
+      if(!last) last = t;
+      if(!paused) ang += (t - last)*SPEED;
+      last = t; place();
+      if(on && !reduce) requestAnimationFrame(tick);
+    }
+    measure(); ang = -Math.PI/2 + 0.5; place();
+    window.addEventListener("resize", function(){ measure(); place(); });
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ measure(); place(); });
+    wrap.addEventListener("pointerenter", function(){ paused = true; });
+    wrap.addEventListener("pointerleave", function(){ paused = false; });
+    wrap.addEventListener("focusin", function(){ paused = true; });
+    wrap.addEventListener("focusout", function(){ paused = false; });
+    if(!reduce) visible(stage, function(v){ on = v; if(v){ last = 0; requestAnimationFrame(tick); } });
+  })();
+
+  /* name sheen follows pointer */
+  (function(){
+    var nm = document.querySelector(".name"); if(!nm || reduce) return;
+    var lines = nm.querySelectorAll(".ln");
+    nm.addEventListener("pointermove", function(e){
+      var r = nm.getBoundingClientRect(), p = 100 - ((e.clientX - r.left)/r.width)*100;
+      lines.forEach(function(l){ l.style.animation = "none"; l.style.backgroundPosition = p.toFixed(1)+"% 0"; });
+    });
+    nm.addEventListener("pointerleave", function(){ lines.forEach(function(l){ l.style.backgroundPosition = ""; l.style.animation = "sheen 8s ease-in-out infinite"; }); });
+  })();
+
+  /* card spotlight */
+  document.querySelectorAll(".card").forEach(function(el){
+    el.addEventListener("pointermove", function(e){ var r = el.getBoundingClientRect(); el.style.setProperty("--mx", (e.clientX-r.left)+"px"); el.style.setProperty("--my", (e.clientY-r.top)+"px"); });
+  });
+
+  /* copy */
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var ok = function(){ var t=b.textContent; b.textContent="Kopyalandı"; b.classList.add("ok"); setTimeout(function(){ b.textContent=t; b.classList.remove("ok"); }, 1600); };
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(b.getAttribute("data-copy")).then(ok, function(){});
+    });
+  });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
